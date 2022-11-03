@@ -1,7 +1,9 @@
 #id-name{
-    color: antiquewhite;
+    color: rgb(45, 180, 79);
+    background-image: url(/images/sunflower-sun-summer-yellow.jpg);
+    background-color: blue;
 }
 
 .class-name{
-    
+
 }
