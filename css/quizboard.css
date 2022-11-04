@@ -11,8 +11,13 @@
     font-size: 2cm;
     font-weight: bold;
     margin-left: 300px;
-    color: white;
+    color: rgb(207, 37, 37);
   }
+  #body {
+    background-color: hwb(180 96% 0% / 0.74);
+    /* background-image: url(/images/h_img.jpg); */
+  }
+
   .button1 {
     margin-left: 300px;
     margin-top: -50px;
@@ -72,11 +77,11 @@
     margin-left: 20px;
   }
   .btn {
-    border-radius: 50%;
+    border-radius: 60%;
     margin-top: 30px;
     width: 150px;
     background-color: #76D7C4;
-    color: black;
+    color: rgb(224, 26, 26);
     font-size: 0.5cm;
     margin-left: 20px;
     margin-top: 10px;

@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/quizboard.css">
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> -->
+    <link href="css/quizboard.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
     <title>Software Engineering Class</title>
+
+
 </head>
-<body class="container">
+<body class="container" id="body">
     <div class="container">
         <div class="heading">
             <h1 class="header1">Quiz Board</h1>
         </div>
 
-        <img class="test1" src="images/test.png" alt="This is an image that represents me" width="140" height="140">
+        <img class="test1" src="images/Test_image.png" alt="This is an image that represents me" width="140" height="140">
         <div class="information">
           <h2 class="header2">What is quiz board?</h2>
         </div>
@@ -35,7 +42,7 @@
               <div class="modal-body">
                 <p>A website that offers multiple choice questions to students. Students get to test their understanding of the content that they have covered.</p>
                 <p>The student should ensure that they answer all the qusetions.</p>
-                <p>On completion, click on the submit button upon which you'll receive your results.</p>
+                <p>On completion, click on the <b>FINISH QUIZ</b> button upon which you'll receive your results.</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -44,13 +51,12 @@
           </div>
         </div>
 
-        <h1>Kwemboi Quiz Board</h1>
+
     </div>
     <!-- <img id='img' src="images/sunflower-sun-summer-yellow.jpg" alt="Image not found" width="1600" height="1600"> -->
         <div class="form-group" class="container">
-            <form>
-                <!-- action="success.html" method="get" target="_blank" -->
-                <ol>
+            <form action="success.html" method="get" target="_blank">
+                <ol><b>
                     <li>What is the short form of Hypertext Markup languange?</li>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault1" id="ans_one_a" value="6">
                     <label class="form-check-label" for="ans_one_a">HTML</label><br>
@@ -86,20 +92,23 @@
                     <label class="form-check-label" for="ans_five_b">js</label> <br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault5" id="ans_five_c" value="0">
                     <label class="form-check-label" for="ans_five_c">Not sure</label>
+                </b>
                 </ol>
                 <!-- <input type="Submit" id="submit_ans" class="btn btn-outline-primary btn-lg"> -->
 
                 <div class="container text-left my-3">
                     <button type="button" class="btn btn-outline-primary btn-lg"  id="finished">FINISH QUIZ</button>
+                    <!-- <input type="reset" id="button3"> -->
                 </div>
 
                 <div class="card text-center outline-light mb-3">
                     <div class="card-body text-primary">
-                      <h5 class="card-title outline-light">Congratulations on taking the quiz</h5>
+                      <h5 class="card-title outline-light"><b>Congratulations on taking the quiz</b></h5>
                       <p class="card-text" id="finalscore"></p>
                     </div>
                 </div>
             </form>
+            <div id="result"></div>
         </div>
             <br>
             <div class="container">

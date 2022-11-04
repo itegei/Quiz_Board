@@ -28,10 +28,11 @@ submitAnswer.addEventListener("click", function (e) {
         level += " Poor performance, Please retake the test.";
     }
     // alert("Your score is " + score + "%." + level);
-    finalAnswer.innerHTML += level;
+    finalAnswer.innerHTML += "Your score is " + score + "%." + level;
+    
 });
 // $("#finished").click(function() {
 //     $("#results").removeClass("d-none");
-//      $("#results").text("You have scored: " + score + "%." + level)
+//      $("#results").text("You have scored: " += score + "%." + level)
     
 // });
