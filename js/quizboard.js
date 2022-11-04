@@ -1,6 +1,6 @@
 const quizAnswers = document.querySelectorAll(".ouranswers");
 const submitAnswer = document.querySelector("#submit_ans");
-//const finalAnswer = document.querySelector("#finalscore");
+const finalAnswer = document.querySelector("#finalscore");
 let marks = 0;
 let total = 0;
 quizAnswers.forEach(function (jibu) {
@@ -19,16 +19,18 @@ submitAnswer.addEventListener("click", function (event) {
     let level = "";
 
     if (score > 80){
-        level += "Excellent";
+        level += " Excellent";
     }
-    else if(score >= 50 && score >= 80 ){
-        level += "Fairly better";
+    else if(score >= 50 && score <= 80 ){
+        level += " Fairly better";
     }
     else{
-        level += "Poor performance, Please retake test.";
+        level += " Poor performance, Please retake test.";
     }
-    alert("Your score is " + score + "%" + level);
-    $("#finalscore").text("You have scored: " + score +"%"+level);
+    // alert("Your score is " + score + "%" + level);
+});
+$("#finished").click(function(){
+    $("#results").removeClass("d-none");
+     $("#results").text("You have scored: " + score +"%"+level)
     
 });
-//$("#")
