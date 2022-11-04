@@ -15,13 +15,13 @@ quizAnswers.forEach(function (jibu) {
     });
 });
 submitAnswer.addEventListener("click", function (event) {
-    let score = (marks/total)*100;
+    let score = ((marks/total)*100).toFixed(2);
     let level = "";
 
-    if (score > 80){
+    if (score >= 80){
         level += " Excellent performance, keep it up!";
     }
-    else if(score >= 50 && score <= 80 ){
+    else if(score >= 50 && score < 80 ){
         level += " Average performance, you can do better";
     }
     else{
