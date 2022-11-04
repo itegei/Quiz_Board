@@ -15,7 +15,7 @@ quizAnswers.forEach(function (jibu) {
     });
 });
 submitAnswer.addEventListener("click", function (event) {
-    let score = ((marks/total)*100).toFixed(2);
+    let score = ((marks/total)*100).toFixed(0);
     let level = "";
 
     if (score >= 80){
