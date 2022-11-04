@@ -1,31 +1,36 @@
-const myAnswers = document.querySelectorAll(".ouranswers");
-const finishButton = document.querySelector("#finished")
-const scoreMessage = document.querySelector("#scoreboard");
-
+const quizAnswers = document.querySelectorAll(".ouranswers");
+const submitAnswer = document.querySelector("#submit_ans");
+const finalAnswer = document.querySelector("#finalscore");
+let marks = 0;
 let total = 0;
-let score = 0;
-myAnswers.forEach(function(answer){
-    total+= parseInt(answer.value);
-})
-finishButton.addEventListener("click", function(e){
-    myAnswers.forEach(function(answer){
-        if (answer.checked){
-            score += parseInt(answer.value);
-        }
-    })
-    let percentageScore = (score/total)*100;
-    let comments = '';
-    if (percentageScore > 80){
-        comments += "Excellent! You have scored " +percentageScore+ "%";
-    }
-    else if (percentageScore >= 50 && percentageScore <= 80){
-        comments += "Good! You have scored " +percentageScore+ "%";
+quizAnswers.forEach(function (jibu) {
+    if(parseInt(jibu.value) > 0) {
+        total += parseInt(jibu.value);
     }
     else{
-        comments += "Poor Donely! You have scored " +percentageScore+ "%";
+        total = total;
     }
-    scoreMessage.innerHTML += comments;
-})
-$("#finished").click(function(){
-     $("#scoreblimp").removeClass("d-none");
+    jibu.addEventListener("change", function (event) {
+        marks += parseInt(event.target.value);
+    });
 });
+submitAnswer.addEventListener("click", function (event) {
+    let score = (marks/total)*100;
+    let level = "";
+
+    if (score > 80){
+        level += " Excellent";
+    }
+    else if(score >= 50 && score <= 80 ){
+        level += " Fairly better";
+    }
+    else{
+        level += " Poor performance, Please retake test.";
+    }
+    alert("Your score is " + score + "%" + level);
+});
+// $("#finished").click(function(){
+//     $("#results").removeClass("d-none");
+//      $("#results").text("You have scored: " + score +"%"+level)
+    
+// });

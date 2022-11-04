@@ -52,22 +52,21 @@
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault5" id="ans_five_b" value="5">
                     <label class="form-check-label" for="ans_five_b">js</label> <br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault5" id="ans_five_c" value="0">
-                    <label class="form-check-label" for="ans_five_c">Not sure</label> <br>
+                    <label class="form-check-label" for="ans_five_c">Not sure</label><br>
                 </ol>
-                <br>                
-                <div class="container text-left my-3">
-                    <button type="button" class="btn btn-outline-primary btn-lg"  id="finished">FINISH QUIZ</button>
-                </div>
+                <input type="Submit" id="submit_ans" class="btn btn-outline-primary btn-lg"  id="finished">
+
                 <div class="container text-center my-3">
-                    <!-- <input type="Submit" id="submit_ans"> -->
+                    <!-- <button type="button" class="btn btn-outline-primary btn-lg"  id="finished">FINISH QUIZ</button> -->
+                </div>
+
+                <div class="card text-center outline-light mb-3">
+                    <div class="card-body text-primary">
+                      <h5 class="card-title outline-light">Congratulations on taking the quiz</h5>
+                      <p class="card-text" id="submit_ans"></p>
+                    </div>
                 </div>
             </form>
-            <div class="card text-center outline-light mb-3">
-                <div class="card-body text-primary">
-                  <h5 class="card-title outline-light">Congratulations on taking the quiz</h5>
-                  <p class="card-text" id="score"></p>
-                </div>
-              </div>
         </div>
             <!-- <p id="finalscore"></p> -->
             <br>
