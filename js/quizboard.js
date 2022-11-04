@@ -1,5 +1,5 @@
 const quizAnswers = document.querySelectorAll(".ouranswers");
-const submitAnswer = document.querySelector("#submit_ans");
+const submitAnswer = document.querySelector("#finished");
 const finalAnswer = document.querySelector("#finalscore");
 let marks = 0;
 let total = 0;
@@ -14,7 +14,7 @@ quizAnswers.forEach(function (jibu) {
         marks += parseInt(event.target.value);
     });
 });
-submitAnswer.addEventListener("click", function (event) {
+submitAnswer.addEventListener("click", function (e) {
     let score = ((marks/total)*100).toFixed(0);
     let level = "";
 
@@ -27,10 +27,11 @@ submitAnswer.addEventListener("click", function (event) {
     else{
         level += " Poor performance, Please retake the test.";
     }
-    alert("Your score is " + score + "%." + level);
+    // alert("Your score is " + score + "%." + level);
+    finalAnswer.innerHTML += level;
 });
-// $("#finished").click(function(){
+// $("#finished").click(function() {
 //     $("#results").removeClass("d-none");
-//      $("#results").text("You have scored: " + score +"%"+level)
+//      $("#results").text("You have scored: " + score + "%." + level)
     
 // });

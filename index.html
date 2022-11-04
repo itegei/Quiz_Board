@@ -10,8 +10,41 @@
 </head>
 <body class="container">
     <div class="container">
+        <div class="heading">
+            <h1 class="header1">Quiz Board</h1>
+        </div>
+
+        <img class="test1" src="images/test.png" alt="This is an image that represents me" width="140" height="140">
+        <div class="information">
+          <h2 class="header2">What is quiz board?</h2>
+        </div>
+        <div class="button1">
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Click Here!</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+  
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Quiz board is...</h4>
+              </div>
+              <div class="modal-body">
+                <p>A website that offers multiple choice questions to students. Students get to test their understanding of the content that they have covered.</p>
+                <p>The student should ensure that they answer all the qusetions.</p>
+                <p>On completion, click on the submit button upon which you'll receive your results.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <h1>Kwemboi Quiz Board</h1>
-        <p>This is going to test use of jquery</p>
     </div>
     <!-- <img id='img' src="images/sunflower-sun-summer-yellow.jpg" alt="Image not found" width="1600" height="1600"> -->
         <div class="form-group" class="container">
@@ -20,31 +53,31 @@
                 <ol>
                     <li>What is the short form of Hypertext Markup languange?</li>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault1" id="ans_one_a" value="6">
-                    <label class="form-check-label" for="ans_one_a">html</label> <br>
+                    <label class="form-check-label" for="ans_one_a">HTML</label><br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault1" id="ans_one_b" value="0">
-                    <label class="form-check-label" for="ans_one_b">mhtl</label> <br>
+                    <label class="form-check-label" for="ans_one_b">MHTL</label><br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault1" id="ans_one_c" value="0">
-                    <label class="form-check-label" for="ans_one_c">tmhl</label> <br>
+                    <label class="form-check-label" for="ans_one_c">TMHL</label>
                     <br>
                     <li>How many sizes of headers are available on HTML by default?</li>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault2" id="ans_two_a" value="0">
-                    <label class="form-check-label" for="ans_two_a">5</label> <br>
+                    <label class="form-check-label" for="ans_two_a">5</label><br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault2" id="ans_two_b" value="0">
-                    <label class="form-check-label" for="ans_two_b">3</label> <br>
+                    <label class="form-check-label" for="ans_two_b">3</label><br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault2" id="ans_two_c" value="4">
-                    <label class="form-check-label" for="ans_two_c">6</label> <br>
+                    <label class="form-check-label" for="ans_two_c">6</label>
                     <br>
                     <li>Is Javascript used for styling?</li>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault3" id="ans_three_a" value="0">
-                    <label class="form-check-label" for="ans_three_a">Yes</label> <br>
+                    <label class="form-check-label" for="ans_three_a">Yes</label><br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault3" id="ans_three_b"  value="6">
-                    <label class="form-check-label" for="ans_three_b">No </label> <br>
+                    <label class="form-check-label" for="ans_three_b">No </label>
                     <br>
                     <li>Can a website without Javascript be interactive? </li>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault4" id="ans_four_a" value="0">
                     <label class="form-check-label" for="ans_four_a">Yes</label> <br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault4" id="ans_four_b" value="3>
-                    <label class="form-check-label" for="ans_four_b">No</label> <br>
+                    <label class="form-check-label" for="ans_four_b">No</label>
                     <br>
                     <li>What is the other name of Javascript? </li>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault5" id="ans_five_a" value="0">
@@ -52,23 +85,22 @@
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault5" id="ans_five_b" value="5">
                     <label class="form-check-label" for="ans_five_b">js</label> <br>
                     <input required class="form-check-input ouranswers" type="radio" name="ansDefault5" id="ans_five_c" value="0">
-                    <label class="form-check-label" for="ans_five_c">Not sure</label><br>
+                    <label class="form-check-label" for="ans_five_c">Not sure</label>
                 </ol>
-                <input type="Submit" id="submit_ans" class="btn btn-outline-primary btn-lg"  id="finished">
+                <!-- <input type="Submit" id="submit_ans" class="btn btn-outline-primary btn-lg"> -->
 
-                <div class="container text-center my-3">
-                    <!-- <button type="button" class="btn btn-outline-primary btn-lg"  id="finished">FINISH QUIZ</button> -->
+                <div class="container text-left my-3">
+                    <button type="button" class="btn btn-outline-primary btn-lg"  id="finished">FINISH QUIZ</button>
                 </div>
 
                 <div class="card text-center outline-light mb-3">
                     <div class="card-body text-primary">
                       <h5 class="card-title outline-light">Congratulations on taking the quiz</h5>
-                      <p class="card-text" id="submit_ans"></p>
+                      <p class="card-text" id="finalscore"></p>
                     </div>
                 </div>
             </form>
         </div>
-            <!-- <p id="finalscore"></p> -->
             <br>
             <div class="container">
             </div>
